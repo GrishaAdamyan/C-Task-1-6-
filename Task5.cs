@@ -1,6 +1,7 @@
 ﻿int[,] matrix = { { 1, 2, 3, 4, 4 }, { 4, 5, 6, 10, 5 } };
 int a = matrix.GetLength(0);
 int b = matrix.GetLength(1);
+int count = 0;
 
 for (int i = 0; i < a; i++)
 {
@@ -9,13 +10,17 @@ for (int i = 0; i < a; i++)
         checkingValues(i, j);
     }
 }
+if (count == 0)
+{
+    Console.WriteLine("no");
+}
 
 void checkingValues(int row, int column)
 {
     int max = matrix[row, 0];
     for (int i = 0; i < b; i++)
     {
-        if (matrix[row,i] > max)
+        if (matrix[row, i] > max)
         {
             max = matrix[row, i];
         }
@@ -32,6 +37,7 @@ void checkingValues(int row, int column)
         }
         if (matrix[row, column] == min)
         {
+            count++;
             Console.WriteLine("The row is " + row);
             Console.WriteLine("The column is " + column);
             Console.WriteLine("The value is " + matrix[row, column]);
