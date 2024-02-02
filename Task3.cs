@@ -1,11 +1,12 @@
-﻿/*Console.WriteLine("enter the number of row:");
+﻿Console.WriteLine("enter the number of row:");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("enter the number of column:");
 int b = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = new int[8, 8];
 int flag = 0;
 
-do{
+do
+{
     int count = addingQueen(a, b);
     if (count == 2)
     {
@@ -33,7 +34,14 @@ for (int i = 0; i < 8; i++)
 {
     for (int j = 0; j < 8; j++)
     {
-        Console.Write(matrix[i, j] + "\t");
+        if (matrix[i, j] == 777)
+        {
+            Console.Write("Q ");
+        }
+        else
+        {
+            Console.Write(matrix[i, j] + " ");
+        }
     }
     Console.WriteLine();
 }
@@ -65,4 +73,4 @@ int addingQueen(int a, int b)
         }
     }
     return count;
-}*/
+}
