@@ -1,4 +1,4 @@
-﻿Console.WriteLine("enter the number of row:");
+﻿/*Console.WriteLine("enter the number of row:");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("enter the number of column:");
 int b = Convert.ToInt32(Console.ReadLine());
@@ -28,7 +28,15 @@ do
             {
                 matrix[i, j] = 0;
             }
-            Console.Write(matrix[i, j] + "\t");
+            if (matrix[i, j] == 777)
+            {
+                Console.Write("K ");
+            }
+            else
+            {
+                Console.Write(matrix[i, j] + " ");
+            }
+
         }
         Console.WriteLine();
     }
@@ -66,4 +74,4 @@ int movingKnight(int a, int b)
         }
     }
     return count;
-}
+}*/
